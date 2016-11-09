@@ -1,0 +1,265 @@
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <!--<script type="text/javascript" src="/home/varun/Desktop/Bootstrap Distribution/js/bootstrap.min.js"></script>-->
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sigmar+One" rel="stylesheet">
+    <link href="css/viewProfile.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+      #navBarMainStyle
+            	{
+            		background-color: rgba(250, 80, 70, 1);
+            		font-family: 'Oswald', sans-serif;
+               	}
+        
+            	#navBarBrand
+            	{
+            		font-weight: bolder;
+        	   		color: white;
+            	}
+        
+            	#navBarDropdown
+            	{
+            		padding-right: 10px;
+            	}
+        
+            	.navBarTextColor
+            	{
+            		color: white;
+            	}
+        
+            	.viewPost
+            	{
+            		margin-left: 5px;
+            		margin-right: 5px;
+            		margin-top: 5px;
+            		margin-bottom: 5px;
+            		
+            		background: white; /* For browsers that do not support gradients */
+            		background: -webkit-linear-gradient(white, #E5E5E5); /* For Safari 5.1 to 6.0 */
+            		background: -o-linear-gradient(white, #E5E5E5); /* For Opera 11.1 to 12.0 */
+        		    background: -moz-linear-gradient(white, #E5E5E5); /* For Firefox 3.6 to 15 */
+        		    background: linear-gradient(white, #E5E5E5); /* Standard syntax */
+        		    
+        			   
+        		}
+        
+        		.viewFollowers
+        		{
+        			margin-left: 5px;
+            		margin-right: 5px;
+            		margin-top: 5px;
+            		background-color: white;
+            		background: white; /* For browsers that do not support gradients */
+            		height: 20%;
+            		/*min-height: 326px;*/
+            		background: -webkit-linear-gradient(white, #E5E5E5); /* For Safari 5.1 to 6.0 */
+            		background: -o-linear-gradient(white, #E5E5E5); /* For Opera 11.1 to 12.0 */
+        		    background: -moz-linear-gradient(white, #E5E5E5); /* For Firefox 3.6 to 15 */
+        		    background: linear-gradient(white, #E5E5E5); /* Standard syntax */
+        		    margin-bottom: 5px;
+        		}
+        
+        		.viewMainPictures
+        		{
+        			padding: 5px 5px 5px 5px;
+        			height: 30%;
+        		}
+        
+        		
+        
+            	.viewPostImage
+            	{
+            		width: 100%;
+            		height: 100%;
+            		z-index: -1;
+              	}
+        
+            	.viewPostTitle
+            	{
+            		color: black;
+            		font-family: 'Sigmar One', cursive;
+            		font-size: 45px;
+            		position: absolute;
+            		top: 0%;
+            		
+            	}
+        
+            	
+        
+            	h1
+            	{
+            		color: white;
+            	}
+        
+            	.viewPostButton
+            	{
+            		width: 100%;
+            		height: 25%;
+            		margin-top: 20px;
+                    position: top;
+            	}
+          	
+        
+            	#viewPostText
+            	{
+            		color: black;
+            		font-weight: bold;
+            		z-index: 1;
+            	   top: 50%;
+              }
+        
+            	#emptySpaceBetweenPosts
+            	{
+            		height: 50px;
+            	}
+        
+            	.viewEachFollower
+            	{
+            		text-align: center;
+            	}
+        
+            	.viewPostClassHeight
+            	{
+            		height: 100%;
+            	}
+        
+            	.viewFollowButton
+            	{
+            		height: 5%;
+            		font-size: 20px;
+            		font-family: 'Oswald', cursive;
+            		font-weight: bold;
+            		margin-left: 35%;
+            		margin-top: 5%;
+            		margin-bottom: 5%;
+            		border: 1px orangered solid;
+            	}
+    </style>
+  </head><body style="background-color: #E5E5E5;">
+    <div class="navbar navbar-default navbar-static-top" id="navBarMainStyle">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><span id="navBarBrand">TLP</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+          <ul class="nav navbar-nav navbar-left">
+            <li class="dropdown" id="navBarDropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span>Users</span> Profile<i class="fa fa-caret-down"></i></a>
+              <ul class="dropdown-menu" role="menu">
+                <li>
+                  <a href="#">Home</a>
+                </li>
+                <li>
+                  <a href="#">Latest Petitions</a>
+                </li>
+                <li>
+                  <a href="#">Localities</a>
+                </li>
+                <li>
+                  <a href="#">People</a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                  <a href="#">My Profile</a>
+                </li>
+                <li>
+                  <a href="#">My Petitions</a>
+                </li>
+                <li>
+                  <a href="#">My Localities</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navber-center" style="width: 50%;">
+            <input type="text" placeholder="Search for localities, people, events, or more..." style="margin-top: 10px; height: 30px; width: 100%;">
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="#"><span class="navBarTextColor">Settings</span></a>
+            </li>
+            <li class="navBarTextColor">
+              <a href="#"><span class="navBarTextColor">Log Out</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="viewPostTitle">Title goes here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section text-center">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1" style="background-clip: border-box;border: 5px #E5E5E5 solid; background-color: white;">
+            <div class="col-lg-12 col-md-12 col-sm-6 col-xs-6">
+              <img src="emptyProfilePicture.png" style="height: 30%; width: 100%; margin-top: 25px; margin-bottom: 25px;">
+            </div>
+            <br>
+            <div>
+              <span id="name">Name goes here</span>
+              <br>
+              <span id="age">Age goes here</span>
+              <br>
+              <span id="locality">Locality goes here</span>
+              <br>
+              <span id="contact_number">Mobile Number goes here</span>
+              <br>
+              <span id="contact_email">Email address goes here</span>
+              <br>
+            </div>
+            <button class="btn btn-error viewFollowButton">+Follow</button>
+          </div>
+          <div class="hidden-lg hidden-md" id="emptySpaceBetweenPosts"></div>
+          <div id="emptySpaceBetweenPosts"></div>
+          <div class="viewPost">
+            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 viewPostClassHeight">
+              <div id="viewPostHover">
+                <p id="viewPostText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                  ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                  ex ea commodo consequat. Lorem ipsum dolor sit. Lorem ipsum dolor sit amet,
+                  consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                  ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor
+                  sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                  ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem
+                  ipsum dolor sit ...</p>
+              </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+              <button class="btn btn-success viewPostButton">Support</button>
+              <button class="btn btn-info viewPostButton">Remark</button>
+              <button class="btn btn-danger viewPostButton">Repost</button>
+            </div>
+          </div>
+          <div id="emptySpaceBetweenPosts"></div>
+        </div>
+       
+          <div id="emptySpaceBetweenPosts"></div>
+        </div>
+      </div>
+    </div>
+    </div>
+  
+
+</body></html>

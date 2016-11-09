@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Upload Image</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+	  	function previewFile(){
+       var preview = document.querySelector('img'); //selects the query named img
+       var file    = document.querySelector('input[type=file]').files[0]; //sames as here
+       var reader  = new FileReader();
+
+       reader.onloadend = function () {
+           preview.src = reader.result;
+       }
+
+       if (file) {
+           reader.readAsDataURL(file); //reads the data as a URL
+       } else {
+           preview.src = "";
+       }
+  }
+
+  previewFile();
+	  </script>
+	  <style type="text/css">
+	  	body{
+	  		
+	  		background-image: url("Setting.png");
+	  		background-position: center;
+	  		background-size: 100%;
+	  	}
+
+	  	.main{
+	  		padding-left: 25%;
+	  		padding-top: 2%;
+	  	}
+
+	  	h2{
+	  		margin: 1em 0 0.5em 0;
+			font-weight: normal;
+			position: relative;
+			text-shadow: 0 -1px rgba(0,0,0,0.6);
+			font-size: 28px;
+			line-height: 40px;
+			background: #355681;
+			background: rgba(53,86,129, 0.8);
+			border: 1px solid #fff;
+			padding: 5px 15px;
+			color: white;
+			border-radius: 0 10px 0 10px;
+			box-shadow: inset 0 0 5px rgba(53,86,129, 0.5);
+			font-family: 'Muli', sans-serif;
+	  	}
+	  </style>
+</head>
+<body>
+	<div class="container">
+		<h2>Change Profile Picture</h2><br><br>
+		<div class="main">
+  		<input type="file" class="btn btn-primary" value="upload" onchange="previewFile()"><br>
+		<img src="Batman.jpg" height="200" alt="Image preview..."><br><br>
+		<a href="Settings.html" class="btn btn-primary" role="button">Back</a>
+		</div>
+  	
+  	</div>
+</body>
+</html>

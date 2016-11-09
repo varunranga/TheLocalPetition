@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Update Information</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	   <style type="text/css">
+	  	form{
+	  		padding-left: 20%;
+	  		padding-right: 35%;
+	  		color: black;
+	  		font-size: 18px;
+
+	  	}
+	  	body{
+	  		background-image: url("Setting.png");
+	  		background-position: center;
+	  		background-size: 100%;
+	  		background-position: fixed;
+	  		padding-left: 6%;
+	  	}
+	  	h2{
+	  		margin: 1em 0 0.5em 0;
+			font-weight: normal;
+			position: relative;
+			text-shadow: 0 -1px rgba(0,0,0,0.6);
+			font-size: 28px;
+			line-height: 40px;
+			background: #355681;
+			background: rgba(53,86,129, 0.8);
+			border: 1px solid #fff;
+			padding: 5px 15px;
+			color: white;
+			border-radius: 0 10px 0 10px;
+			box-shadow: inset 0 0 5px rgba(53,86,129, 0.5);
+			font-family: 'Muli', sans-serif;
+	  	}
+	  </style>
+	  <script type="text/javascript">
+	  	function click()
+	  	{
+	  		alert("Information Updated");
+	  	}
+	  </script>
+
+</head>
+<body>
+	<div class="container">
+	<h2>Update Information</h2>
+	<br><br>
+		<form onsubmit="scriptUpdateInfromation.php" method="post">
+		  
+		  <div class="form-group">
+		    <label>First Name</label>
+		    <input type="text" class="form-control" id="NewPassword" name="firstname">
+		  </div>
+		  <div class="form-group">
+		    <label>Last Name</label>
+		    <input type="text" class="form-control" id="ConfirmPassword" name="lastname">
+		  </div>
+		  <div class="form-group">
+		    <label>Locality</label>
+		    <input type="text" class="form-control" id="CurrentPassword" name="myLocality">
+		  </div>
+		  <div class="form-group">
+		    <label>City</label>
+		    <input type="text" class="form-control" id="CurrentPassword" name="myCity">
+		  </div>
+		  <div class="form-group">
+		    <label>State</label>
+		    <input type="text" class="form-control" id="CurrentPassword" name="myState">
+		  </div>
+		  <div class="form-group">
+		    <label>Country</label>
+		    <input type="text" class="form-control" id="CurrentPassword" name="myCountry">
+		  </div>
+		  <div class="form-group">
+		    <label>Phone Number</label>
+		    <input type="text" class="form-control" id="CurrentPassword" name="myPhoneNumber">
+		  </div>
+		  <div class="form-group">
+		    <label>E mail Address</label>
+		    <input type="email" class="form-control" id="CurrentPassword" name="myEmail">
+		  </div>
+		  <button type="submit" class="btn btn-primary" onclick="click()">Submit</button><br><br>
+		  <a href="Settings.html" class="btn btn-primary">Back</a><br><br>
+		</form>
+  	</div>
+</body>
+</html>

@@ -1,0 +1,103 @@
+Global Database:
+	1) USER ID
+	2) FIRST NAME
+	3) LAST NAME
+	5) LOCALITY
+	6) CITY
+	7) STATE
+	8) COUNTRY
+	9) PHONE NUMBER
+	10) EMAIL ID
+	11) USERS FOLLOWING
+	12) USERS FOLLOWERS
+	13)	LOCALITIES FOLLOWING
+	14) PROFILE PICTURE
+
+// Each locality needs an ID... can hardcode this. Eg SAHAKARNAGAR - 01, GIRINAGAR - 02, ELECTRONIC CITY - 03
+// Each facility needs an ID... can hardcode this. Eg POLICE - 01, ELECTRICTY - 02, WATER - 03
+
+Authorities Database:
+	1) AUTHORITY ID
+	2) LOCALITY ID
+	3) FACILITY ID
+	4) FOLLOWING
+	5) PHONE NUMBER
+	6) LOCATION COORDINATES
+	7) AUTHORITY PICTURE
+
+Authorities Newsfeed:
+	1) POST ID
+	2) hasSUPPORTED
+	3) hasREPOSTED
+	4) hasREMARKED
+	5) TIMESTAMP
+
+Authorities Notifications:
+	1) NOTIFICATION ID
+	2) POST ID (Petitions)
+	3) SUPPORT USER ID
+	4) REMARK USER ID
+	5) REMARK MADE (by REMARK USER ID)
+	6) REPOST USER ID
+	7) REPOST MADE (by REPOST USER ID)
+	8) TIMESTAMP
+	9) CLOSED?
+
+Global Newsfeed:
+	1) POST ID
+	2) USER ID From
+	3) USER ID To
+	4) AUTHORITY ID From
+	5) AUTHORITY ID To
+	6) POST TITLE
+	7) POST TEXT
+	8) POST TYPE (PETITION or ARTICLE or EVENT)
+	9) NUMBER of SUPPORTS
+	10) USER IDs of SUPPORTERS (',' comma separated)
+	11) NUMBER of REPOST
+	12) USER IDs of REPOSTERS (',' comma separated)
+	13) STRING of REPOSTS (',' comma separated)
+	14) NUMBER of REMARKS
+	15) USER IDs of REMARKS (',' comma separated)
+	16) STRING of REMARKS (',' comma separated)
+	17) TIMESTAMP
+	18) CLOSED? (For PETITION) (YES or NO or NULL)
+	19) WHEN? (For EVENT)
+	20) WHERE? (For EVENT)
+	21) DURATION? (For EVENT)
+	22) POST PICTURE
+
+User Newsfeed:
+	1) POST ID
+	2) hasSUPPORTED
+	3) hasREPOSTED
+	4) hasREMARKED
+	5) TIMESTAMP
+
+// User Wall clicked fetch SELECT * FROM globalNewsfeedTable WHERE userIDTo = $userID or userIDFrom = $userID LIMIT = 50
+// No need to waste space on more DBs
+// Same for authorities
+// Page loading speed will be a bit higher, but space used up is less.
+
+User Notifications:
+	1) NOTIFICATION ID
+	2) POST ID
+	3) SUPPORT USER ID
+	4) REMARK USER ID
+	5) REMARK MADE (by REMARK USER ID)
+	6) REPOST USER ID
+	7) REPOST MADE (by REPOST USER ID)
+	8) TIMESTAMP
+	9) CLOSED? (For petition)
+
+viewProfile
+myProfile
+newsFeed
+latestPetitions
+people (Tentative)
+myPetitions
+myLocalities
+mySettings
+index
+myNotifications
+authorityProfile

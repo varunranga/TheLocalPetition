@@ -1,0 +1,261 @@
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Black+Ops+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
+    <style type="text/css">
+      .background-image-absolute
+      {
+        filter: blur(5px);
+      }
+      #brand
+      {
+        background-color:rgba(240, 255, 240, 0.4);
+        padding: 20px;
+      }
+      #table
+      {
+        background-color:rgba(240, 255, 240, 0.4);
+        position: absolute;
+        left: 20%;
+        width:60%;
+        border-color: rgba(240, 255, 240, 0.4);
+      }
+      #section1
+      {
+        height: 100%; 
+        width: 100%;
+      }
+      #section2
+      {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 200%;
+        background: #808080; /* fallback for old browsers */
+		background: -webkit-linear-gradient(to left, #808080 , #3fada8); /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to left, #808080 , #3fada8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      }
+
+      td
+      {
+        text-align: center;
+        height: 40px;
+        vertical-align: center;
+      }
+
+      #aboutus
+      {	
+      	position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 100%;
+        background: #ee0979; /* fallback for old browsers */
+		background: -webkit-linear-gradient(to left, #ee0979 , #ff6a00); /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to left, #ee0979 , #ff6a00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		}
+
+		#header
+		{
+			position: fixed;
+			z-index: 1;
+		}
+
+		#loginDiv
+		{
+			position: fixed;
+			top: -300px;
+			color: black;
+			background: rgba(120, 55, 160, 0.8);
+			padding: 25px;
+			z-index: 2;
+		}
+
+    </style>
+  </head>
+  <body>
+
+  	<div id="loginDiv" class="col-lg-offset-6">
+
+  	<form method="POST" action="scriptLogIn.php">
+
+  		<label for="loginEmailID" class="col-lg-4 col-md-4 col-sm-6 col-xs-6" style="text-align: center;">Email ID</label>
+  		<input type="text" size="30" name="loginEmailID" class="col-lg-6 col-md-6 col-sm-6 col-xs-6" />
+  		<br />
+  		<br />
+  		<label for="loginPassword" class="col-lg-4 col-md-4 col-sm-6 col-xs-6" style="text-align: center;">Password</label>
+  		<input type="password" size="30" name="loginPassword" class="col-lg-6 col-md-6 col-sm-6 col-xs-6" />
+  		<br />
+  		<br />
+  		<div style="text-align: right; margin: 10px">
+  			<input type="submit" name="Submit" value="Log In">
+  		</div>
+  	</form>
+
+  	</div>
+    
+    <div id="section1">
+    <div class="cover">
+      <div class="navbar navbar-default" id="header">
+        <div class="container" style="background-color:rgba(240, 255, 240, 0.4);">
+          <div class="navbar-header" >
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><span>The Local Petition<sup><i><span style="color: white; font-weight: bolder; background-color: purple; padding: 2px">BETA</span></i></sup></span></a>
+          </div>
+          <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="active" onclick="onLoginDivClick();">
+                <a>Login</a>
+              </li>
+              <li>
+                <a href="#aboutus">About Us</a>
+              </li>
+              <li>
+                <a href="#section2">Sign Up</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="background-image-absolute cover-image" style="background-image : url('judges-hammer.jpg')"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center" id="brand">
+            <h1>The Local Petition</h1>
+            <p>Your own platform to complain and fight for your rights directly with
+              the concerned authorities!</p>
+            <br>
+            <br>
+            <a class="btn btn-lg btn-default" href="#aboutus">Click to know more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="aboutus">
+    	<div style="background: rgba(240, 255, 240, 0.4); position: relative; top: 10%; left: 15%; width: 70%; padding: 25px;">
+    	<h1 style="font-size: 72px; font-family: 'Black Ops One', cursive;"><u> Who are we? </u></h1>
+    	<br />
+    	<p style="color: white; font-family: 'Oswald', cursive; font-size: 20px;"><span style="font-family: cursive; font-size: 25px; font-weight: bolder;">The Local Petition.</span>
+    		<br />
+    		<br />
+			Take charge!
+			In between all the chaos we encounter in our lives, we always have complaints to throw at the body that has been assigned to rule and organize us – the government. Does a simple complaint regarding a troublesome neighbor, a leaking pipeline, a dangerous pothole struggle to reach the ones who are expected to listen? Does a smelly drainage, a lurking pervert, scarce water supply, frequent power cuts bother your family whose lives are already in pandemonium? The police don’t pay heed. The corporation and the BBMP’s are busy carrying out more important duties than to adhere to your requests. But problems we face are getting out of hand and it’s time we take charge! Don’t let go of the taxes you pay. Seize the law. It’s all in your hands. And we will provide all of you a hand in that. Welcome to The Local Petition! We, at TLP have designed for you a real complaint box that will let you petition your complaints formally and your frustrations will be notified directly to the necessary authorities immediately! Regular replies will be reverted to your TLP account ASAP too! What more do you need than a faithful mediator? In the meanwhile you can also post your views and your problems on a specially designed News Feed that we’d like to call The Voice Box and gossip about the government with so many new people. Be a part of a revolutionizing community that will work towards a better and a promising future to let your voices and frustrations out. And someday hopefully we will have a responsible system that will force TLP to no more exist. Someday we won’t have anything to complain about!
+			<br />
+			Create your account now!!
+		</p>
+		</div>
+    </div>
+    <div id="section2">
+      
+      <h2 style="font-size: 72px; font-family: 'Black Ops One', cursive; margin-top: 100px; margin-left: 200px; margin-bottom: 50px;">Sign up</h2>
+      
+      <div class="container" style="border: 5px brown solid; border-radius: 10px; padding: 25px;">
+      	<form action="scriptSignUp.php" method="POST" enctype="multipart/form_date">
+        	
+      		<label class="col-lg-6 col-md-6 col-sm-4 col-xs-4" for="firstName" style="text-align: center;">First Name</label>
+      		<input class="col-lg-6 col-md-6 col-sm-8 col-xs-8" type="text" name="firstName" />
+      		<br />
+			<br />
+      		<label class="col-lg-6 col-md-6 col-sm-4 col-xs-4" for="lastName" style="text-align: center;">Last Name</label>
+      		<input class="col-lg-6 col-md-6 col-sm-8 col-xs-8" type="text" name="lastName" />
+      		<br />
+      		<br />
+      		<label class="col-lg-6 col-md-6 col-sm-4 col-xs-4" for="myEmail" style="text-align: center;">Email ID</label>
+      		<input class="col-lg-6 col-md-6 col-sm-8 col-xs-8" type="text" name="myEmail" />
+      		<br />
+      		<br />
+      		<label class="col-lg-6 col-md-6 col-sm-4 col-xs-4" for="myPhoneNumber" style="text-align: center;">Phone Number</label>
+      		<input class="col-lg-6 col-md-6 col-sm-8 col-xs-8" type="text" name="myPhoneNumber" />
+      		<br />
+      		<br />
+      		<label class="col-lg-6 col-md-6 col-sm-4 col-xs-4" for="myLocality" style="text-align: center;">Locality</label>
+      		<input class="col-lg-6 col-md-6 col-sm-8 col-xs-8" type="text" name="myLocality" />
+      		<br />
+      		<br />
+      		<label class="col-lg-6 col-md-6 col-sm-4 col-xs-4" for="myCity" style="text-align: center;">City</label>
+      		<input class="col-lg-6 col-md-6 col-sm-8 col-xs-8" type="text" name="myCity" value="Bangalore" readonly />
+      		<br />
+      		<br />
+      		<label class="col-lg-6 col-md-6 col-sm-4 col-xs-4" for="myState" style="text-align: center;">State</label>
+      		<input class="col-lg-6 col-md-6 col-sm-8 col-xs-8" type="text" name="myState" value="Karnataka" readonly />
+      		<br />
+      		<br />
+      		<label class="col-lg-6 col-md-6 col-sm-4 col-xs-4" for="myCountry" style="text-align: center;">Country</label>
+      		<input class="col-lg-6 col-md-6 col-sm-8 col-xs-8" type="text" name="myCountry" value="India" readonly />
+      		<br />
+      		<br />
+      		<label class="col-lg-6 col-md-6 col-sm-4 col-xs-4" for="myPassword" style="text-align: center;">Password</label>
+      		<input class="col-lg-6 col-md-6 col-sm-8 col-xs-8" type="password" name="myPassword" onchange="validatePassword(myPassword.value, confirmingMyPassword.value);"/>
+      		<br />
+      		<br />
+      		<label class="col-lg-6 col-md-6 col-sm-4 col-xs-4" for="comfirmingMyPassword" style="text-align: center;">Confirm Password</label>
+      		<input class="col-lg-6 col-md-6 col-sm-8 col-xs-8" type="password" name="confirmingMyPassword" onchange="validatePassword(myPassword.value, confirmingMyPassword.value);" />
+      		<br />
+      		<br />
+      		<label class="col-lg-6 col-md-6 col-sm-4 col-xs-4" for="myProfilePicture" style="text-align: center;">Upload a profile picture</label>
+      		<input class="col-lg-6 col-md-6 col-sm-8 col-xs-8" type="file" name="myProfilePicture" />
+      		<br />
+      		<br />
+      		<br />
+      		<br />
+      		<div style="text-align: right;">
+      			<input type="submit" id="completeBtn" name="Submit" value="Complete Registration" class="btn btn-lg btn-danger">
+      		</div>
+
+
+      	</form>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+
+    	broughtDownLoginDiv = 0
+    	pos = -300;
+    	loginDiv = document.getElementById("loginDiv")
+    	animate = 0
+
+    	function onLoginDivClick()
+    	{
+
+    		if (broughtDownLoginDiv == 0)
+    		{
+    			setInterval(setLoginDivPos, 1)
+    		} 
+
+    		broughtDownLoginDiv = 1  		
+    	}
+
+    	function setLoginDivPos()
+    	{
+    		if (pos != 50) loginDiv.style.top = pos++ + "px"
+    	}
+
+    	function validatePassword(password, confirm)
+    	{
+    		var submit = document.getElementById('completeBtn')
+
+    		if (password != confirm)
+    		{
+    			submit.disabled = true;
+    		}
+    		else
+    		{
+    			submit.disabled = false;
+    		}
+    	}
+
+    </script>
+    
+  
+
+</body></html>
