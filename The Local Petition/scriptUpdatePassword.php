@@ -29,7 +29,7 @@
 
 	if ($oldPassword != $existPassword)
 	{
-		die ("<script type='text/javascript'> alert('Old password entered is wrong!'); </script>");
+		die ("<script type='text/javascript'> alert('Old password entered is wrong!'); window.location.assign('newsfeed.php'); </script>");
 	}
 
 	$newPassword = $_POST['newPassword'];
